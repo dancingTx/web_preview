@@ -160,9 +160,9 @@ __依赖收集__
 
 **小结**
 
-首先在Observer的过程中会注册get方法，该方法用来进行**【依赖收集】**。在它的闭包中会有一个Dep对象，该对象用来存放Watcher对象的实例。其实，**【依赖收集】**的过程就是把Watcher实例存放在对应的Dep对象中去。get方法可以让当前的Watcher对象（Dep.target）存放到它的subs中（addSubs)方法，在数据变化时，set会调用Dep对象的notify方法通知它内部所有的Watcher对象进行视图更新。
+首先在Observer的过程中会注册get方法，该方法用来进行【依赖收集】。在它的闭包中会有一个Dep对象，该对象用来存放Watcher对象的实例。其实，【依赖收集】的过程就是把Watcher实例存放在对应的Dep对象中去。get方法可以让当前的Watcher对象（Dep.target）存放到它的subs中（addSubs)方法，在数据变化时，set会调用Dep对象的notify方法通知它内部所有的Watcher对象进行视图更新。
 
-这是Object.defineProperty的set/get方法处理的事情，那么**【依赖收集】**的前提条件还有两个：
+这是Object.defineProperty的set/get方法处理的事情，那么【依赖收集】的前提条件还有两个：
 
 - 触发get方法；
 - 新建一个Watcher对象。
