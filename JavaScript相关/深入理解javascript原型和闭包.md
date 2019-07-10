@@ -48,7 +48,7 @@ java或者C#中的对象都是new一个class出来的，而且里面有字段、
 
 先说个最常见的例子：
 
-![](E:\pro\web_preview\JavaScript相关\images\172012532064920.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript%E7%9B%B8%E5%85%B3/images/172012532064920.png)
 
 以上代码中，obj是一个自定义的对象，其中a、b、c就是它的属性，而且在c的属性值还是一个对象，它又有name、year两个属性。
 
@@ -167,13 +167,13 @@ prototype也是我们的老朋友，即使不了解的人，也应该都听过�
 
 这个prototype的属性值是一个对象（属性的集合，再次强调！），默认的只有一个叫做constructor的属性，指向这个函数本身。
 
-![](E:\pro\web_preview\JavaScript相关\images\172121182841896.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/172121182841896.png)
 
 如上图，SuperType是是一个函数，右侧的方框就是它的原型。
 
 原型既然作为对象，属性的集合，不可能就只弄个constructor来玩玩，肯定可以自定义的增加许多属性。例如这位Object大哥，人家的prototype里面，就有好几个其他属性。
 
-![](E:\pro\web_preview\JavaScript相关\images\172130097842386.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/172130097842386.png)
 
 咦，有些方法怎么似曾相似？
 
@@ -191,7 +191,7 @@ Fn.prototype.getYear = function () {
 
 看到没有，这样就变成了
 
-![](E:\pro\web_preview\JavaScript相关\images\172138591437263.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/172138591437263.png)
 
 没问题！
 
@@ -241,9 +241,9 @@ console.log(fn.getYear());
 
 （由于操作原型proto会对浏览器的性能造成一定影响，因此在es6中推荐使用getPrototypeOf代替xx.prototype,用setPrototypeOf代替 xx.Prototype === xx.__ proto__）
 
-![](E:\pro\web_preview\JavaScript相关\images\181508179098239.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181508179098239.png)
 
-![](E:\pro\web_preview\JavaScript相关\images\181508340651970.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181508340651970.png)
 
 上面截图看来，obj.__ proto__和Object.prototype的属性一样！这么巧！
 
@@ -251,7 +251,7 @@ console.log(fn.getYear());
 
 obj这个对象本质上是被Object函数创建的，因此obj.__ proto__=== Object.prototype。我们可以用一个图来表示。
 
-![](E:\pro\web_preview\JavaScript相关\images\181509180812624.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181509180812624.png)
 
 即，每个对象都有一个__ proto__属性，指向创建该对象的函数的prototype。
 
@@ -263,7 +263,7 @@ obj这个对象本质上是被Object函数创建的，因此obj.__ proto__=== Ob
 
 但是Object.prototype确实一个特例——它的__ proto__指向的是null，切记切记！
 
-![](E:\pro\web_preview\JavaScript相关\images\181510403153733.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181510403153733.png)
 
 还有——函数也是一种对象，函数也有__ proto__吗？
 
@@ -283,7 +283,7 @@ obj这个对象本质上是被Object函数创建的，因此obj.__ proto__=== Ob
 
 好了，根据上面说的一句话——对象的__ proto__ 指向的是创建它的函数的prototype，就会出现：Object.__ proto__ === Function.prototype。用一个图来表示。
 
-![](E:\pro\web_preview\JavaScript相关\images\181512068463597.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181512068463597.png)
 
 上图中，很明显的标出了：自定义函数Foo.__ proto__ 指向Function.prototype，Object.__ proto__ 指向Function.prototype，唉，怎么还有一个……Function.__ proto__指向Function.prototype？这不成了循环引用了？
 
@@ -297,7 +297,7 @@ obj这个对象本质上是被Object函数创建的，因此obj.__ proto__=== Ob
 
 答案是肯定的。因为Function.prototype指向的对象也是一个普通的被Object创建的对象，所以也遵循基本的规则。
 
-![](E:\pro\web_preview\JavaScript相关\images\181512489403338.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181512489403338.png)
 
 OK 本节结束，是不是很乱？
 
@@ -313,13 +313,13 @@ OK 本节结束，是不是很乱？
 
 这个时候就需要用到instanceof。例如：
 
-![](E:\pro\web_preview\JavaScript相关\images\181635128935132.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181635128935132.png)
 
 上图中，f1这个对象是被Foo创建，但是“f1 instanceof Object”为什么是true呢？
 
 至于为什么过会儿再说，先把instanceof判断的规则告诉大家。根据以上代码看下图：
 
-![](E:\pro\web_preview\JavaScript相关\images\181635468939277.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181635468939277.png)
 
 Instanceof运算符的第一个变量是一个对象，暂时称为A；第二个变量一般是一个函数，暂时称为B。
 
@@ -329,7 +329,7 @@ Instanceof的判断队则是：沿着A的__ proto__这条线来找，同时沿�
 
 通过上以规则，你可以解释很多比较怪异的现象，例如：
 
-![](E:\pro\web_preview\JavaScript相关\images\181636252689920.png)
+![]https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/181636252689920.png)
 
 这些看似很混乱的东西，答案却都是true，这是为何？
 
