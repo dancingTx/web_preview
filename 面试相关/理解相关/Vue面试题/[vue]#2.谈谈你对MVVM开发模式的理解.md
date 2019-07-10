@@ -106,7 +106,7 @@ __依赖收集__
   - 用addSubs方法可以在目前的Dep对象中增加一个Watcher的订阅操作；
   - 用notify方法通知目前Dep对象的subs中的所有Watcher对象触发更新操作。
 
-- **观察者 Watcher **
+- **观察者 Watcher**
 
   ```js
   class Watcher {
