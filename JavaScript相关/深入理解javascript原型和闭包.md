@@ -46,7 +46,7 @@ java或者C#中的对象都是new一个class出来的，而且里面有字段、
 
 先说个最常见的例子：
 
-![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript%E7%9B%B8%E5%85%B3/images/172012532064920.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/JavaScript相关/images/原型闭包/172012532064920.png)
 
 以上代码中，obj是一个自定义的对象，其中a、b、c就是它的属性，而且在c的属性值还是一个对象，它又有name、year两个属性。
 
