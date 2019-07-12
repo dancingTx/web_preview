@@ -1,6 +1,4 @@
-# 转载来自网络，侵权立删
-
-# [深入理解javascript原型和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977987.html)
+# 深入理解javascript原型和闭包
 
 ## 1.一切都是对象
 
