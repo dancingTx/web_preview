@@ -4,7 +4,7 @@
 
 **问题1:** 如果实现了dom拖拽功能，但是在绑定拖拽事件的时候发现每当元素稍微移动一点便触发了大量的回调函数，导致浏览器直接卡死，这个时候怎么办？
 
-![](https://github.com/ytx1150328467/web_preview/blob/master/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0(%E6%8E%92%E5%90%8D%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E%EF%BC%89/images/1.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0(%E6%8E%92%E5%90%8D%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E)/images/timer.png)
 
 **问题2:** 如果按钮绑定了表单提交的`POST`请求，但是当用户在网络不佳的时候，多次点击按钮导致表单重复提交，如何防止多次提交的发生？
 
