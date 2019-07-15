@@ -233,7 +233,7 @@ export default {
 
 首先，在store文件夹下面新建一个modules文件夹，然后在modules文件里面建立需要管理状态的js文件，既然要把不同部分的状态分开管理，那就要把它们给分成独立的状态文件了，如下图：
 
-![](E:\pro\web_preview\Vue相关\images\651356550-5b59c0b8969f4_articlex.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/651356550-5b59c0b8969f4_articlex.png)
 
 而对应的store文件夹下面的index.js 里面的内容就直接改写成：
 
