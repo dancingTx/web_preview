@@ -1,6 +1,6 @@
 ### Vue官方推荐的风格指南
 
-![](E:\pro\web_preview\Vue相关\images\3534079505-5b3b32c4aacc3_articlex.png)
+![](https://github.com/ytx1150328467/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/3534079505-5b3b32c4aacc3_articlex.png)
 
 > 一共按照优先级分4类：
 
