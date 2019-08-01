@@ -41,7 +41,7 @@
 
 在这个`viewport`的作用下，网页的缩放系数为`0.3333333333333333`，IPhone6+的`device-width`为`414`个不缩放的CSS像素，经过缩放后，`viewport`的`width`等于`device-width / 0.3333333333333333`，为`1241`个缩放后的CSS像素，远远大于`device-width`：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212432325-1240238690.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212432325-1240238690.png)
 
 假如你的网页想同时使用响应式布局和`lib-flexible`,然后你写了一个媒介查询，需要在`1024px`以上的分辨率(桌面设备)呈现某个特殊样式：
 
@@ -55,7 +55,7 @@
 
 会发现这个页面在IPhone6+下也会应用到该媒介查询的样式：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212433840-1706265521.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212433840-1706265521.png)
 
 究其原因：IPhone6+下的网页由于`lib-flexible`的作用，导致页面的`width`与实际物理分辨率的宽相等，也就是`1241`个像素，完全达到了该媒介查询的范围。
 
@@ -103,7 +103,7 @@ border:1px solid #ccc;
 
 由于`lib-flexible`在适配的时候，会缩放网页，导致CSS代码中的`1px`等于物理分辨率的`1px`，这样子这个`1px`边框的问题在经过`lib-flexible`适配的设备下就很好解决了，直接应用`border:1px solid xxx`即可。但是**lib-flexible目前只适配了IPhone设备，安卓设备压根没做适配**。
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212435231-1310836847.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212435231-1310836847.png)
 
 通过源码可以看出，Android设备的`dpr`全部设置为`1`，因此也导致了在Android设备下，`1px`的边框问题依然存在。所以为了`lib-flexible`的项目里解决掉`1px`问题，就需要综合上述两种做法：
 
@@ -133,7 +133,7 @@ border:1px solid #ccc;
 
 通过两种方案的混合，经过测试，在`devicePixelRatio`为`3`的`meilan note`上，显示出的线条非常细腻，看起来比较舒服，IPhone上的表现也很不错，以下是`meilan note`测试截图：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212436075-1504512633.jpg)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212436075-1504512633.jpg)
 
 第一根线是上面的`mixin`效果；第二根线是直接使用`border:1px solid xxx;`的效果。
 
@@ -209,11 +209,11 @@ border:1px solid #ccc;
 
 首先看下不使用`lib-flexible`时，雪碧图背景在`retina`下是怎么做的，以腾讯的一个活动页面来说明[点击这里](http://qzs.qq.com/qzone/qzact/act/qzapp/qzone5.0/mobile/index.html)，这是它在使用`1x`的雪碧图时某个元素的`background`的样式：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212437465-2044438147.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212437465-2044438147.png)
 
 这是它在使用`2x`的雪碧图时某个元素的`background`的样式：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212439371-1665206951.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212439371-1665206951.png)
 
 总结下它这个做法：
 
@@ -279,18 +279,18 @@ border:1px solid #ccc;
 
 尽管这个方法看起来完美，但是不建议使用，因为它的适配效果不好，这是IPhone6下的效果：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212440668-287688756.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212440668-287688756.png)
 
 看起来不错，那是当然的，因为这就是它默认没有任何缩放的效果。然后看IPhone6+的效果:
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212441762-1534848391.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212441762-1534848391.png)
 
 有点差异，但好像还能接受。再看看nexus6的效果：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212442606-1315306942.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212442606-1315306942.png)
 
-这就不能忍了，样式差的离谱。造成这个差异的原因也很简单，就是`rem`的副作用，腾讯的页面里所有`position,size`都是不带小数的数值，而且`2x`跟`1x`之间是整数的翻倍，而不是`3x`跟`2x`之间的`1.5`倍，`lib-flexible`会导致大部分的设备下`position`和``size`都是小数数值，所以很难保证背景图片缩放后还能通过`position`显示到正确的位置：
+这就不能忍了，样式差的离谱。造成这个差异的原因也很简单，就是`rem`的副作用，腾讯的页面里所有`position,size`都是不带小数的数值，而且`2x`跟`1x`之间是整数的翻倍，而不是`3x`跟`2x`之间的`1.5`倍，`lib-flexible`会导致大部分的设备下`position`和`size`都是小数数值，所以很难保证背景图片缩放后还能通过`position`显示到正确的位置：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212443496-375628135.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212443496-375628135.png)
 
 从网页优化的角度来说，减少请求数，减少请求数据大小是两个基本的思路，雪碧图就是一个减少请求数但是不能减少请求数据量的方法。`lib-flexible`不能使用兼容`3x`屏的雪碧图的情况看起来是它一个大的缺陷，但实际上也并非如此：雪碧图如果用不了，就采用别的思路来优化，我能想到的更好的就是图片的延迟加载和懒加载，在`app`页面里控制好默认只加载首屏的图片，并且采用延迟和懒加载的方式，避免阻塞页面的加载，也能有极好的用户体验，打开手机淘宝的页面给人的感觉就是如此，而且你去看看手机淘宝的应用会发现它根本就没有用雪碧图，但是速度还是很快。
