@@ -27,7 +27,7 @@
 
 需要注意的是，第1个要求提到的`device-width`与`media query`里面的`device-width`属性表达的意思有些区别：第1个要求提到的`device-width`在移动设备下指的是设备的宽度，但是在PC下指的是浏览器的可视区域宽度，比如下面的网页，我把浏览器窗口缩小，然后可以看到`viewport`里尽管已经把`width`设置成了`device-width`，但是网页大小却不是我的桌面分辨率宽度(设备宽度)：
 
-![](https://github.com/dancingTx/web_preview/tree/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212430184-426453882.png)
+![](https://github.com/dancingTx/web_preview/blob/master/HTML5%E7%9B%B8%E5%85%B3/H5%E7%A7%BB%E5%8A%A8%E7%AB%AF/images/querstion/459873-20160109212430184-426453882.png)
 
 `media query`里的`device-width`属性，始终指的是设备的宽度。所以响应式布局的媒介查询要用`width`属性，不用`device-width`属性，因为在桌面设备下，把浏览器窗口缩小的时候，`device-width`并不会发生变化，当调整浏览器窗口大小就看不到响应式的效果。
 
