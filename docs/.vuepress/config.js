@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/web_preview/',
     title: '技术博客',
     description: '一个专门写技术的博客',
     head: [
