@@ -4,7 +4,7 @@
 
 组件是vue.js中最强大也是最具特色的功能之一，而组件实例的作用域也是相互独立的，这就意味着不同的组件之间数据是无法共享的。一般来说，组件间可以有以下几种关系：
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-7a15ec352b4e7d84.png)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-7a15ec352b4e7d84.png)
 
 如上图所示，A和B、B和C、B和D都是父子关系，C和D是兄弟关系，A和C、D是隔代关系(可能隔多代)。
 
@@ -76,7 +76,7 @@ __注：组件中的数据一共有三种形式：data，props，computed__
 
 接下来通过一个实例，说明子组件如何向父组件传递值：当我们点击`Vue.js Demo`后，子组件向父组件传递值，文字由原来的"传递的是一个值"变成“子向父组件传值”，实现子组件向父组件值得传递。
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-8d31dfc061d39fad.png)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-8d31dfc061d39fad.png)
 
 ```vue
 // 子组件
@@ -231,13 +231,13 @@ Event.$on(eventName,data=>{})
 </script>
 ```
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-6677501da9006ed2.gif)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-6677501da9006ed2.gif)
 
 $on 监听了自定义事件 data-a 和 data-b ，因为有时不确定何时会触发事件，一般会在 mounted 或 created 钩子中进行监听。
 
 ### 三、vuex
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-e62ba449a0c2e7ac.png)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-e62ba449a0c2e7ac.png)
 
 **1.简要介绍Vuex原理**
 
@@ -400,7 +400,7 @@ export default {
 </script>
 ```
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-db162929eb89cb7f.png)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-db162929eb89cb7f.png)
 
 如上图所示 `$attrs`表示没有继承数据的对象，格式为`{属性名：属性值}`。Vue2.4 中提供了`$attrs`，`$listeners`来传递数据与事件，跨级组件之间的通讯变得更加方便。
 
@@ -452,7 +452,7 @@ export default {
 
 我们来看一个实例：孙组件D、E和F获取 A 组件传递过来的 color 值，并能实现数据响应式变化，即 A 组件的 color 变化后，组件 D、E、F 不会跟着变(核心代码如下)
 
-![](E:\pro\web_preview\Vue相关\images\组件通信\3174701-38ef418e343f6b76.png)
+![](https://github.com/dancingTx/web_preview/blob/master/Vue%E7%9B%B8%E5%85%B3/images/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/3174701-38ef418e343f6b76.png)
 
 ```vue
 // A 组件 
